@@ -7,4 +7,4 @@
   - name: Start Docker Service
     command: sudo systemctl start docker
   - name: Deploy your application and runs as a container
-    command: docker run -itd -p 8084:8081 belosheabhijeet/insureme-app:4.0
+    command: docker run -itd -p 8084:8081 belosheabhijeet/insureme-app:5.0
