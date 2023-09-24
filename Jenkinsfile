@@ -9,5 +9,10 @@ stages {
         git 'https://github.com/belosheabhijeet/MyFinalProject-Insured-Me.git'
            }
        }
+   stage('Build Package') {
+       steps {
+         sh 'mvn package'
+       }
+  }
 }
 }
