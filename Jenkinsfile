@@ -22,7 +22,7 @@ stages {
 
    stage('Created docker image') {
      steps {
-       sh 'docker build -t belosheabhijeet/insureme-app:5.0 .'
+       sh 'docker build -t belosheabhijeet/insureme-app:6.0 .'
         }       
          }
    stage('Push the image to dockedr hub') {
@@ -30,7 +30,7 @@ stages {
        withCredentials([usernamePassword(credentialsId: 'docker1-hub', passwordVariable: 'docker_password', usernameVariable: 'docker_user')]) {
      sh 'docker login -u ${docker_user} -p ${docker_password}'
         }
-        sh 'docker push belosheabhijeet/insureme-app:5.0'
+        sh 'docker push belosheabhijeet/insureme-app:6.0'
      }
        }
    stage('Deploy the image on the production') {
